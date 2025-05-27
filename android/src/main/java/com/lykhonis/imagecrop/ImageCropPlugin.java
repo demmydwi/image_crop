@@ -33,7 +33,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
+//import io.flutter.plugin.common.PluginRegistry.Registrar;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
@@ -60,7 +60,7 @@ public final class ImageCropPlugin implements FlutterPlugin , ActivityAware, Met
     /**
      * legacy APIs
      */
-    public static void registerWith(Registrar registrar) {
+    public static void registerWith(PluginRegistry.Registrar registrar) {
         ImageCropPlugin instance = new ImageCropPlugin(registrar.activity());
         instance.setup(registrar.messenger());
         registrar.addRequestPermissionsResultListener(instance);
